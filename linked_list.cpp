@@ -33,17 +33,17 @@ int main() {
 
     List theList;   // declare and empty list
 
-    std::cout << "Empty list.." << std::endl;
+    std::cout << "\nEmpty list.." << std::endl;
     printList(theList); // test printing the empty list
 
     // reinitialize list with one random number between 0 and 99
     int value = std::rand() % 100;
     theList = List(value);
 
-    std::cout << "Single value list.." << std::endl;
+    std::cout << "\nSingle value list.." << std::endl;
     printList(theList); // test printing the single value list
 
-    std::cout << "Add 10 value to the list.." << std::endl;
+    std::cout << "\nAdd 10 values to the list.." << std::endl;
     // add 10 random numbers
     for (int item=0; item < 10; ++item) {
 
@@ -82,7 +82,9 @@ int main() {
     } // insert 10 items
 
 
-    std::cout << "Read 5 values from the list.." << std::endl;
+    std::cout << "\nRead 5 values from the list.." << std::endl;
+    printList(theList);
+
     // read 5 random values from the list
     for (int item = 0; item < 5; ++item) {
         int position{0};
@@ -94,7 +96,9 @@ int main() {
         std::cout << "Read " << value << " at position " << position << std::endl;
     } // read 5 items
 
-    std::cout << "Modify 5 values in the list.." << std::endl;
+    std::cout << "\nModify 5 values in the list.." << std::endl;
+    printList(theList);
+
     // modify 5 random values in the list
     for (int item = 0; item < 5; ++item) {
         int position{0};
@@ -112,7 +116,9 @@ int main() {
     } // modify 5 items
 
 
-    std::cout << "Remove 5 values from the list.." << std::endl;
+    std::cout << "\nRemove 5 values from the list.." << std::endl;
+    printList(theList);
+
     // remove 5 random values from the list
     for (int item = 0; item < 5; ++item) {
         int position{0};
@@ -140,7 +146,7 @@ void printList(List list) {
 
     for (int item = 0; item < list.getSize(); ++item) {
         std::cout << list.read(item);
-        if (item < list.getSize())
+        if (item < list.getSize()-1)
             std::cout << ",";
     }
 

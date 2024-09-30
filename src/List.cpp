@@ -24,7 +24,7 @@ List::List(int value) : head(nullptr), size(0) {
 } // property constructor
 
 /**
- *  Remove all elements from list
+ *  Remove all elements from list and reintialize to empty
  */
 List::~List() {
 
