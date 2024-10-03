@@ -22,7 +22,7 @@ enum ListPosition {
 
 // function declarations (proto-types)
 // --------------------------------------------------------------------------------
-void printList(List list);
+void printList(List& list);
 
 // function definitions
 // --------------------------------------------------------------------------------
@@ -141,7 +141,7 @@ int main() {
  * Utility method to print the current list to the console
  * @param list - populated list of values
  */
-void printList(List list) {
+void printList(List& list) {
     std::cout << "List{";
 
     for (int item = 0; item < list.getSize(); ++item) {
